@@ -1,101 +1,115 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ورشة بغداد</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ورشة بغداد</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Arial;
-      background: #f4f6f8;
-      direction: rtl;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial;
+  background: #f4f6f8;
+  direction: rtl;
+}
 
-    header {
-      background: linear-gradient(135deg, #0C8CE9, #0057b7);
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+/* HEADER */
+header {
+  background: linear-gradient(135deg, #0C8CE9, #003e99);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-    }
+header h1 {
+  margin: 0;
+  font-size: 30px;
+}
 
-    header p {
-      margin-top: 8px;
-      opacity: 0.9;
-    }
+header p {
+  margin: 10px 0;
+}
 
-    .container {
-      padding: 20px;
-    }
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    .card {
-      background: white;
-      margin-bottom: 15px;
-      padding: 18px;
-      border-radius: 15px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-    }
+.btn-main {
+  background: #FFD700;
+  color: black;
+}
 
-    .card h2 {
-      margin-top: 0;
-      color: #0C8CE9;
-    }
+.btn-call {
+  background: #28a745;
+  color: white;
+}
 
-    .services span {
-      display: inline-block;
-      background: #e6f2ff;
-      color: #0C8CE9;
-      padding: 6px 10px;
-      margin: 5px;
-      border-radius: 8px;
-      font-size: 14px;
-    }
+/* SECTIONS */
+.container {
+  padding: 20px;
+}
 
-    .buttons {
-      text-align: center;
-      margin-top: 20px;
-    }
+.card {
+  background: white;
+  margin-bottom: 15px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
 
-    .btn {
-      display: inline-block;
-      margin: 8px;
-      padding: 12px 20px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.2s;
-    }
+.card h2 {
+  color: #0C8CE9;
+}
 
-    .btn-main {
-      background: #FFD700;
-      color: black;
-    }
+/* SERVICES */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
-    .btn-whatsapp {
-      background: #25D366;
-      color: white;
-    }
+.service {
+  flex: 1 1 45%;
+  background: #eaf4ff;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+}
 
-    .btn:hover {
-      transform: scale(1.05);
-    }
+/* MAP */
+iframe {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
 
-    footer {
-      text-align: center;
-      padding: 15px;
-      color: #777;
-      font-size: 14px;
-    }
-  </style>
+/* WHATSAPP FLOAT */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px;
+  color: #777;
+}
+</style>
+
 </head>
 
 <body>
@@ -103,6 +117,9 @@
 <header>
   <h1>🚗 ورشة بغداد</h1>
   <p>تشخيص وصيانة السيارات بأحدث الأجهزة</p>
+
+  <a class="btn btn-main" href="#">تحميل التطبيق</a>
+  <a class="btn btn-call" href="tel:07700000000">اتصال مباشر</a>
 </header>
 
 <div class="container">
@@ -110,32 +127,31 @@
   <div class="card">
     <h2>من نحن</h2>
     <p>
-      ورشة بغداد متخصصة بفحص وتشخيص أعطال السيارات باستخدام أجهزة حديثة مثل Topdon،
-      ونوفر خدمة دقيقة وسريعة لكل الزبائن.
+      ورشة بغداد متخصصة بفحص وتشخيص أعطال السيارات باستخدام أجهزة حديثة مثل Topdon.
+      نضمن لك تشخيص دقيق وخدمة سريعة.
     </p>
   </div>
 
   <div class="card">
     <h2>خدماتنا</h2>
     <div class="services">
-      <span>🔧 فحص كمبيوتر</span>
-      <span>🔧 تشخيص أعطال</span>
-      <span>🔧 صيانة عامة</span>
-      <span>🔧 برمجة سيارات</span>
+      <div class="service">فحص كمبيوتر</div>
+      <div class="service">تشخيص أعطال</div>
+      <div class="service">صيانة دورية</div>
+      <div class="service">برمجة سيارات</div>
     </div>
   </div>
 
   <div class="card">
-    <h2>تواصل معنا</h2>
-    <p>📞 07700000000</p>
-  </div>
-
-  <div class="buttons">
-    <a class="btn btn-main" href="#">تحميل التطبيق</a>
-    <a class="btn btn-whatsapp" href="https://wa.me/9647700000000">واتساب</a>
+    <h2>موقعنا</h2>
+    <iframe height="250"
+      src="https://maps.google.com/maps?q=baghdad&t=&z=13&ie=UTF8&iwloc=&output=embed">
+    </iframe>
   </div>
 
 </div>
+
+<a class="whatsapp" href="https://wa.me/9647700000000">📲</a>
 
 <footer>
   © 2026 ورشة بغداد
